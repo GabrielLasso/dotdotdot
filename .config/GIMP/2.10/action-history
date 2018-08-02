@@ -1,0 +1,26 @@
+# GIMP action-history
+
+(history-item "tools-pencil" 5)
+(history-item "tools-color-picker" 2)
+(history-item "tools-eraser" 2)
+(history-item "tools-zoom" 1)
+(history-item "tools-rect-select" 0)
+(history-item "image-new" 0)
+(history-item "file-quit" 1)
+(history-item "tools-bucket-fill" 0)
+(history-item "tools-rotate" 0)
+(history-item "edit-cut" 0)
+(history-item "edit-paste" 0)
+(history-item "file-export" 0)
+(history-item "layers-alpha-add" 0)
+(history-item "edit-clear" 1)
+(history-item "file-open" 0)
+(history-item "dialogs-preferences" 0)
+(history-item "dockable-close-tab" 0)
+(history-item "documents-open" 0)
+(history-item "dialogs-navigation" 0)
+(history-item "dialogs-colors" 0)
+(history-item "tools-crop" 0)
+(history-item "file-save" 1)
+
+# end of action-history

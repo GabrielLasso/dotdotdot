@@ -1,0 +1,10 @@
+# GIMP gimp-eraser-tool options
+
+(brush "2. Hardness 050")
+(dynamics "Dynamics Off")
+(palette "Histórico de cor")
+(brush-size 1.000000)
+(brush-hardness 0.500000)
+(hard yes)
+
+# end of gimp-eraser-tool options

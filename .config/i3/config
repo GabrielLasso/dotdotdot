@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $BROWSER firefox
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -31,6 +32,33 @@ for_window [class=".*"] border pixel 2
 
 exec ~/.fehbg
 
+for_window [class="^Godot.*$"] floating enable
+
+# Navigation
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# Hotkeys
+for_window [title="^cal$"] floating enable, resize set 170px 150px, move position 1196 19
+bindsym $mod+Control+c exec --no-startup-id i3-sensible-terminal --title cal -e watch -t cal
+bindsym $mod+Control+r exec --no-startup-id i3-sensible-terminal -e ranger
+bindsym $mod+Control+w exec --no-startup-id $BROWSER
+
+# Shutdown
+bindsym XF86PowerOff exec sudo shutdown -h now
+
+# Volume control
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5+ 
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5-
+bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
+
+# Screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# Screenshot
+bindsym Print exec screenshot
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -48,10 +76,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -60,10 +88,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -71,11 +99,12 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+v split toggle
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle

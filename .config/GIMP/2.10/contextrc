@@ -1,0 +1,13 @@
+# GIMP user context
+
+(tool "gimp-pencil-tool")
+(paint-info "gimp-pencil")
+(brush "2. Hardness 050")
+(dynamics "Dynamics Off")
+(mybrush "100% Opaque")
+(pattern "Pine")
+(gradient "Frente para fundo (RGB) ")
+(palette "Histórico de cor")
+(font "Sans-serif")
+
+# end of user context
