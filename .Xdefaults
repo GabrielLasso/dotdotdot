@@ -1,5 +1,5 @@
-urxvt*font: xft:Noto Sans Mono :size=9, xft:Terminus:pixelsize=1:antialias=false
-#xft:Noto Sans Mono :size=8, xft:Kochi Gothic :antialias=false, xft:FontAwesome :size=8
+URxvt.font: xft:Inconsolata:size=10:antialias=true, \
+            xft:DejaVu Sans:size=10:antialias=false
 urxvt*scrollBar: false
 urxvt*transparent: true
 urxvt*tintColor: white
