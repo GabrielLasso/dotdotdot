@@ -1,5 +1,5 @@
-URxvt.font: xft:Inconsolata:size=10:antialias=true, \
-            xft:DejaVu Sans:size=10:antialias=false
+URxvt.font: xft:Inconsolata:size=12:antialias=true, \
+            xft:DejaVu Sans:size=10:antialias=false, \
 urxvt*scrollBar: false
 urxvt*transparent: true
 urxvt*tintColor: white
@@ -12,13 +12,14 @@ urxvt*fadeColor: #000000
 urxvt*iso14755: false
 urxvt*iso14755_52: false
 
-urxvt*perl-ext-common: default,clipboard,matcher,resize-font
-urxvt*keysym.C-C: perl:clipboard:copy
-urxvt*keysym.C-V: perl:clipboard:paste
-urxvt*url-launcher: /usr/bin/firefox
+urxvt*perl-ext-common: default,matcher,resize-font
+urxvt*url-launcher: qutebrowser
 urxvt*matcher.button: 1
 urxvt*resize-font.smaller: C-Down
 urxvt*resize-font.bigger: C-Up
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
 #URxvt.keysym.Control-l: printf "\\033c"\n
 
-urxvt.keysym.Control-l: command:\033c
+#urxvt.keysym.Control-l: command:\033c
