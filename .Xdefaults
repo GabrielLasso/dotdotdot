@@ -20,6 +20,6 @@ urxvt*resize-font.bigger: C-Up
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
-#URxvt.keysym.Control-l: printf "\\033c"\n
+URxvt.keysym.Control-l: printf "\\033c"\n
 
 #urxvt.keysym.Control-l: command:\033c

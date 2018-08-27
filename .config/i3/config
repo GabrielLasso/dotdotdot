@@ -30,8 +30,9 @@ font pango:monospace 8
 gaps inner 10
 for_window [class=".*"] border pixel 2
 
-exec ~/.fehbg
+exec --no-startup-id ~/.fehbg
 exec --no-startup-id nm-applet
+exec --no-startup-id setxkbmap -model br-abnt2 -layout br
 
 for_window [class="^Godot.*$"] floating enable
 
@@ -40,13 +41,14 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 # Hotkeys
-for_window [title="^cal$"] floating enable, resize set 170px 150px, move position 1196 19
+for_window [title="^cal$"] floating enable, resize set 220px 160px, move position 1146 19
 bindsym $mod+Control+c exec --no-startup-id i3-sensible-terminal --title cal -e watch -t cal
-bindsym $mod+Control+r exec --no-startup-id i3-sensible-terminal -e ranger
 bindsym $mod+Control+w exec --no-startup-id $BROWSER
+bindsym $mod+Control+r exec --no-startup-id i3-sensible-terminal -e ranger
+bindsym $mod+Control+t exec --no-startup-id telegram-desktop
 
-# Shutdown
-bindsym XF86PowerOff exec sudo shutdown -h now
+# 
+bindsym $mod+Control+p exec --no-startup-id monitor
 
 # Volume control
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5+ 

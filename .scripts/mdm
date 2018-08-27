@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo "Escolha um desktop enviroment:"
+DEs=()
+paths=()
+count=0
+for i in `ls /usr/share/xsessions`
+do
+    DEs+=(${i::-8})
+    paths+=(`grep ^Exec /usr/share/xsessions/$i | cut -d '=' -f 2`)
+    echo $count - ${DEs[$count]}
+    count=$((count+1))
+done
+
+read de
+
+xinit `type -p ${paths[$de]}` -- vt$XDG_VTNR
