@@ -1,5 +1,5 @@
 "" General
-set number " Show line numbers
+set relativenumber " Show line numbers
 set showmatch " Highlight matching brace
 set visualbell " Use visual bell (no beeping)
  
